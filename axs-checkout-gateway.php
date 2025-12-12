@@ -378,13 +378,13 @@ function axs_checkout_init_gateway_class()
                                 break;
                             case 'EXPIRED':
                                 // Payment cancelled
-                                $order->update_status('cancelled', 'AXS Checkout payment was expired.');
-                                $order->add_order_note(sprintf(
-                                    'AXS Checkout payment was expired by customer. Amount: %s %s. Transaction ID: %s',
-                                    $decrypted_data['payload']['amount'] ?? 'N/A',
-                                    $decrypted_data['payload']['currency'] ?? 'N/A',
-                                    $decrypted_data['payload']['transactionRef'] ?? 'N/A'
-                                ));
+                                //$order->update_status('cancelled', 'AXS Checkout payment was expired.');
+                                //$order->add_order_note(sprintf(
+                                //    'AXS Checkout payment was expired by customer. Amount: %s %s. Transaction ID: %s',
+                                //    $decrypted_data['payload']['amount'] ?? 'N/A',
+                                //    $decrypted_data['payload']['currency'] ?? 'N/A',
+                                //    $decrypted_data['payload']['transactionRef'] ?? 'N/A'
+                                //));
                                 break;
                             default:
                                 // Unknown status
